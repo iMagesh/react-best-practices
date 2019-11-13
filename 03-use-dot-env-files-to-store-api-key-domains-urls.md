@@ -55,3 +55,5 @@ When you run
 `npm test` it takes the .env.test configs
 
 `npm build` will take the .env.production configs
+
+Further reading: https://create-react-app.dev/docs/adding-custom-environment-variables/
