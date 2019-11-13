@@ -1,4 +1,4 @@
-For Ajax requestions, create an instance file that can be imported wherever ajax calls are to be done instead of importing the default axios property from the library
+For Ajax API calls/requests, create an instance file that can be imported wherever ajax calls are to be done instead of importing the default axios property from the library
 
 Let's add the below code to `/src/utils/ajax-helper.js`
 
