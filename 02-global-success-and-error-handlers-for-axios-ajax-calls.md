@@ -13,6 +13,7 @@ we can disable handler for an individual HTTP call if we want to like,
 
 File `/src/actions/api.js`
 ```js
+// defaultHandler should be false when you want to add custom handler
 axiosInstance.get('/v2/api-endpoint', { defaultHandler: false })
 ```
 
