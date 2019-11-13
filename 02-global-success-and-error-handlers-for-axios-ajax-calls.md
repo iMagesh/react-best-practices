@@ -1,5 +1,7 @@
 ### Create a flag to enable or disable the global handler for success/error response
 
+File `/src/utils/axios-helper.js`
+
 ```js
 const isHandlerEnabled = (config={}) => {
   return config.hasOwnProperty('defaultHandler') && !config.defaultHandler ? 
@@ -9,6 +11,7 @@ const isHandlerEnabled = (config={}) => {
 
 we can disable handler for an individual HTTP call if we want to like, 
 
+File `/src/actions/api.js`
 ```js
 axiosInstance.get('/v2/api-endpoint', { defaultHandler: false })
 ```
@@ -16,6 +19,8 @@ axiosInstance.get('/v2/api-endpoint', { defaultHandler: false })
 ### Axios request interceptor
 
 Let's add request handler. You can also intercept request and add headers before the request is sent to server like,
+
+File `/src/utils/axios-helper.js`
 
 ```js
 const requestHandler = (request) => {
@@ -38,6 +43,8 @@ axiosInstance.interceptors.request.use(
 Now coming back to handling success and error in a global centralized place.
 
 ### Using axios response and error interceptors
+
+File `/src/utils/axios-helper.js`
 
 ```js
 const errorHandler = (error) => {
