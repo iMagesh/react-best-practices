@@ -45,3 +45,11 @@ create a file in your app's root directory with the relevant environment name li
 Similarly,
 `vim /my-app-directory/.env.development` for storing dev keys, urls and constants
 `vim /my-app-directory/.env.test` for storing test keys, urls and constants
+
+When you run 
+
+`npm start` it takes the .env.development configs
+
+`npm test` it takes the .env.test configs
+
+`npm build` will take the .env.production configs
