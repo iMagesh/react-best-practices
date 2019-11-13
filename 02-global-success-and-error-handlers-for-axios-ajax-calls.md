@@ -2,7 +2,7 @@
 
 ```js
 const isHandlerEnabled = (config={}) => {
-  return config.hasOwnProperty('handlerEnabled') && !config.handlerEnabled ? 
+  return config.hasOwnProperty('defaultHandler') && !config.defaultHandler ? 
     false : true
 }
 ```
@@ -10,7 +10,7 @@ const isHandlerEnabled = (config={}) => {
 we can disable handler for an individual HTTP call if we want to like, 
 
 ```js
-axiosInstance.get('/v2/api-endpoint', { handlerEnabled: false })
+axiosInstance.get('/v2/api-endpoint', { defaultHandler: false })
 ```
 
 ### Axios request interceptor
