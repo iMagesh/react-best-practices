@@ -43,7 +43,9 @@ create a file in your app's root directory with the relevant environment name li
 `vim /my-app-directory/.env.production` and store all the production keys, urls in it
 
 Similarly,
+
 `vim /my-app-directory/.env.development` for storing dev keys, urls and constants
+
 `vim /my-app-directory/.env.test` for storing test keys, urls and constants
 
 When you run 
