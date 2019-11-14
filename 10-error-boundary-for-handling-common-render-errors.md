@@ -74,3 +74,5 @@ and display the custom message in the format that we have given (we can also use
 
 We can use ErrorBoundary to wrap components that are suspected to have render issues maybe because of the complexity.
 We can have multiple ErrorBoundary for different modules so we can show more specific errors. 
+
+Do not use Boundaries to handle errors in things like event handlers or other stand-alone logic. Stick to try…catch for such cases
