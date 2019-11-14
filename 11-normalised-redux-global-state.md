@@ -1,4 +1,4 @@
-### Designing a Normalized State
+### Designing a Normalized Redux State
 
 The basic concepts of normalizing data are:
 
@@ -125,3 +125,6 @@ const blogPosts = [
   // and repeat many times
 ]
 ```
+
+To learn about how to update the above normalised state in the reducer
+refer: https://redux.js.org/recipes/structuring-reducers/updating-normalized-data
