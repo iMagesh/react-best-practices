@@ -10,8 +10,8 @@ export { default as Home } from "./Home/HomeIndex";
 export { default as Login } from "./Login/Login";
 export { default as CodeBody } from "./ModuleDetail/CodeTask/CodeBody.js";
 export { default as CodeHeader } from "./ModuleDetail/CodeTask/CodeHeader.js";
-export { default as NotFound } from "./common/NotFound";
-export { default as Signup } from "./common/Signup";
+export { default as NotFound } from "./Errors/NotFound";
+export { default as Signup } from "./Signup/Signup";
 
 ```
 
