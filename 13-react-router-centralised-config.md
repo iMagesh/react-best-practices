@@ -42,14 +42,17 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { FirebaseContext } from '../Firebase';
 
 function RouteWithSubRoutes(route) {
   return (
     <Route
       path={route.path}
       render={props => (
+        <FirebaseContext.Consumer>
         // pass the sub-routes down to keep nesting
-        <route.component {...props} routes={route.routes} />
+          <route.component {...props} routes={route.routes} />
+        </ FirebaseContext.Consumer>
       )}
     />
   );
