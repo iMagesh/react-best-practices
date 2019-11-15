@@ -5,6 +5,9 @@ This is a standard folder structure followed in majority of the projects but som
 ```bash    
   APP
     ├── src/
+        ├── configs
+            ├── url-config.js
+            └── api-paths.js
         ├── utils
             ├── axios-helpers.js
             ├── date-helpers.js
