@@ -46,7 +46,8 @@ This is a standard folder structure followed in majority of the projects but som
             ├── action1.js
             └── action2.js
         └── routes
-            └── index.js
+            ├── all_routes.js
+            └── AppRouter.js
     ├── public/
         ├── images/
         ├── css/
