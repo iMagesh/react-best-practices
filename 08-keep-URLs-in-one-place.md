@@ -4,7 +4,7 @@ You can use the .env file like we discussed in [dot env files](https://github.co
 
 or create a separate URL config file if you do not want to mix the API keys along with URLs
 
-File `/configs/url-config.js`
+File `/src/configs/url-config.js`
 
 ```js
 export const urls = {
@@ -33,3 +33,43 @@ export const doLogin = accessToken => {
   };
 };
 ```
+
+You can also keep all the API paths in one file so if there is any change in the path in the future, it can be easily modified since it is all in one file. 
+
+File `/src/configs/api-paths.js`
+
+```js
+export const path = {
+  HOME: {
+    //APIs related to home module will be in here
+    LOGIN: "/api/v1/auth/login",
+    SIGNUP: "/api/v1/auth/register",
+  }
+  ME: {
+    //APIs related to ME Modules will go in here
+    GET_ALL_MODULES: "/api/v1/ME/modules",
+  }
+}
+
+```
+
+Then you can update the below file like,
+
+File `/src/actions/loginAction.js`
+
+```js
+import { urls } from "../../config/url-config"
+import { path } from "../../config/api-paths"
+
+export const doLogin = accessToken => {
+  return dispatch => {
+    console.log("In Login Action");
+    return fetch(urls.API_END_POINT + path.HOME.LOGIN, {
+      config
+    })
+      .then(res => res.json()) // expecting a json response
+      .then(json => console.log(json));
+  };
+};
+```
+
