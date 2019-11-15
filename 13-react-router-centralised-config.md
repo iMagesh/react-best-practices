@@ -32,7 +32,7 @@ export default routes;
 
 ```
 
-File `/src/routes/Router.js`
+File `/src/routes/AppRouter.js`
 
 ```js
 
